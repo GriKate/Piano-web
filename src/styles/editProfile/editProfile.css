@@ -1,0 +1,74 @@
+.edit-form {
+  display: flex;
+  flex-direction: column; }
+
+.edit-head {
+  margin-bottom: 56px;
+  font-family: 'Archivo', sans-serif;
+  font-weight: bold;
+  font-size: 56px;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+  color: #232327; }
+
+.edit-container {
+  max-width: 364px;
+  margin: 0 auto; }
+
+.form-input-head {
+  align-self: flex-start;
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 160%;
+  color: #232327;
+  margin-bottom: 8px; }
+
+.edit-form-input {
+  border: 3px solid #F3F3F3;
+  box-sizing: border-box;
+  border-radius: 16px;
+  padding: 16px 0 16px 20px;
+  background: #F3F3F3;
+  margin-bottom: 24px; }
+  .edit-form-input:last-child {
+    margin-bottom: 48px; }
+  .edit-form-input:focus {
+    background: #fff;
+    border: 3px solid #E6E6E6;
+    outline: none; }
+    .edit-form-input:focus::placeholder {
+      color: #000; }
+
+.save-button {
+  background: #C2C2C2;
+  border-radius: 12px;
+  padding: 19.5px 0;
+  border: none;
+  outline: none;
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 140%;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: #FFFFFF; }
+
+.edit-cancel-btn {
+  font-family: 'Noto Sans';
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+  color: #615FC9;
+  display: block;
+  margin-bottom: 200px;
+  margin-top: 26.5px; }
+  .edit-cancel-btn:hover {
+    text-decoration: none; }
+
+.error {
+  border-color: #EE7171;
+  color: #EE7171; }
+
+/*# sourceMappingURL=editProfile.css.map */

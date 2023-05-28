@@ -1,0 +1,342 @@
+a:hover {
+  text-decoration: none;
+}
+.lib-head-item:first-child {
+  font-family: 'Archivo', sans-serif;
+  font-weight: bold;
+  font-size: 56px;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+  color: #232327;
+}
+.lib-head-item:last-child {
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 140%;
+  cursor: pointer;
+  color: #23c6d0;
+}
+.lib-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.library-container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.library-top {
+  margin-top: 35px;
+  margin-bottom: 100px;
+  padding: 0 156px;
+}
+.search-input-wrapper {
+  width: 100%;
+  padding: 13px 27px;
+  margin-top: 32px;
+  margin-bottom: 0;
+  background: #f5f5f5;
+  border-radius: 8px;
+  display: flex;
+}
+.search-input-wrapper img {
+  margin-right: 14px;
+}
+#lib-search-input {
+  width: 90%;
+  border: none;
+  background: transparent;
+  outline: none;
+  padding: 0;
+  cursor: text;
+}
+.dif-level-block {
+  margin-top: 60px;
+}
+.dif-level-block span {
+  display: block;
+  text-align: left;
+  font-family: 'Archivo', sans-serif;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+}
+.level-btns {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+.level-btns-item {
+  display: block;
+  border: 4px solid #615FC9;
+  box-sizing: border-box;
+  border-radius: 32px;
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 140%;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: #615FC9;
+  padding: 19.5px 0;
+  width: 261px;
+  transition: all 0.3s;
+  &:hover {
+    text-decoration: none;
+    background: #615FC9;
+    color: #FFFFFF;
+  }
+}
+.selected-level {
+  background: #615FC9;
+  color: #FFFFFF;
+  &:hover {
+    color: #FFFFFF;
+  }
+}
+.rated-songs-block {
+  margin-top: 100px;
+}
+.rated-songs-name {
+  text-align: left;
+  font-family: 'Archivo', sans-serif;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+  color: #232327;
+  display: block;
+}
+.rated-songs-list {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 32px;
+}
+.rated-song-desc {
+  margin-top: 20px;
+}
+.rated-songs-item {
+  position: relative;
+  max-width: 200px;
+  border-radius: 14px;
+}
+.rated-songs-item img {
+  width: 100%;
+}
+.card-mask {
+  width: 100%;
+  position: absolute;
+  background: #000;
+  opacity: 0.2;
+  height: 74%;
+  border-radius: 12px;
+  left: 0;
+  display: none;
+}
+.card-icons {
+  display: flex;
+  position: absolute;
+  top: 76px;
+  left: 10%;
+  width: 80%;
+  justify-content: space-between;
+  display: none;
+}
+.card-icons-item, .melody-icons-item, .melody-icons-link {
+  width: 48px;
+  height: 48px;
+  background: #ffffff;
+  border-radius: 28px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.card-icons-item:nth-child(2) {
+  padding-left: 6px;
+}
+.card-icons-item svg {
+  height: 100%;
+  margin: 0 auto;
+}
+.rated-author-name {
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 160%;
+  color: #232327;
+}
+.rated-song-name {
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 160%;
+  color: #8f909f;
+}
+.library-bottom {
+  padding: 0 120px;
+  margin-bottom: 150px;
+}
+.all-songs-block {
+  text-align: left;
+  position: relative;
+}
+.all-songs-block input {
+  display: none;
+}
+.all-songs-name {
+  font-family: 'Archivo', sans-serif;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+  color: #232327;
+  margin-left: 36px;
+}
+.songs-sort-type {
+  position: relative;
+  cursor: pointer;
+}
+.songs-sort-name {
+  display: inline-block;
+}
+.songs-sort-type span {
+  margin-left: 12px;
+  margin-bottom: 16px;
+  font-family: 'Archivo', sans-serif;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+  color: #23c6d0;
+  cursor: pointer;
+}
+.songs-sort-type svg {
+  width: 15px;
+  height: 14px;
+  position: absolute;
+  top: 12px;
+  right: -10%;
+}
+.rated-songs-item:hover .card-mask {
+  display: block;
+}
+.rated-songs-item:hover .card-icons {
+  display: flex;
+}
+.rated-songs-item:hover .likes-count-block {
+  display: none;
+}
+.dropdown-block {
+  position: absolute;
+  padding: 24px 42px 24px 36px;
+  background: #ffffff;
+  border-radius: 20px;
+  filter: drop-shadow(0px 2px 24px rgba(0, 0, 0, 0.08));
+  top: 55px;
+  left: 179px;
+  z-index: 1;
+  display: none;
+}
+#dropdown-input:checked ~ .dropdown-block {
+  display: block;
+}
+.dropdown-block-item {
+  font-family: Noto Sans;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 160%;
+  color: #696a7b;
+  display: block;
+}
+.dropdown-block-item:first-child {
+  margin-bottom: 16px;
+}
+#selected-sort-type {
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 160%;
+  color: #232327;
+}
+#selected-sort-type::after {
+  content: '';
+  width: 8px;
+  height: 9px;
+  background: url('../../assets/dropdown.svg');
+  display: inline-block;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-left: 10px;
+}
+.dropdown-block a {
+  text-decoration: none;
+}
+.songs-list-item {
+  display: flex;
+  padding: 24px 0 24px 36px;
+  transition: all 0.2s;
+  border-radius: 12px;
+  position: relative;
+  & img {
+    width: 88px;
+    height: 88px;
+  }
+  &:hover {
+    background: rgba(21, 241, 255, 0.1);
+  }
+  &:hover .melody-icons {
+    display: flex;
+  }
+}
+.melody{
+  &-info {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  &-author {
+    display: block;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 160%;
+    color: #232327;
+    margin-bottom: 4px;
+  }
+  &-name {
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 160%;
+    color: #8F909F;
+  }
+  &-icons {
+    position: absolute;
+    right: 36px;
+    top: 44px;
+    width: 168px;
+    justify-content: space-between;
+    display: none;
+    &-item:first-child {
+      padding-left: 6px;
+    }
+    &-item svg {
+      height: 100%;
+      margin: 0 auto;
+      display: block;
+    }
+  }
+
+}
+.likes-count {
+  &-block {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    color: #fff;
+    z-index: 1;
+  }
+}
+

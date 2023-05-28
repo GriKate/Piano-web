@@ -1,0 +1,200 @@
+.player-wrapper {
+  position: relative; }
+
+.song {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 50px;
+  background-color: #fff; }
+
+.back__button {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 16px;
+  left: -50px; }
+
+.song__name {
+  display: flex; }
+
+.song__name_name {
+  font-family: Archivo;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+  color: #232327;
+  margin: 0; }
+
+.song__name_song {
+  font-family: Archivo;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+  color: #232327;
+  margin: 0; }
+
+.song__icon {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer; }
+
+.back__icon {
+  height: 20px; }
+
+.song__icon_share {
+  height: 18px; }
+
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  /*width: 32px;*/
+  /*height: 32px;*/
+  /*margin-left: 70px;*/
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: center; }
+  button:focus {
+    outline: none; }
+  button:hover .back__icon path {
+    fill: #23c6d0; }
+  button:hover .song__icon_like path {
+    fill: #23c6d0; }
+  button:hover .song__icon_share path {
+    stroke: #23c6d0; }
+  button:hover .player__icon path {
+    stroke: #23c6d0;
+    fill: #23c6d0; }
+  button:hover .player__icon line {
+    stroke: #23c6d0; }
+  button:hover .play-icon path {
+    stroke: #23c6d0;
+    fill: #23c6d0; }
+  button:hover .mute__icon path {
+    stroke: #23c6d0; }
+  button:hover .mute__icon line {
+    stroke: #23c6d0; }
+  button:hover .metronome__icon path {
+    stroke: #23c6d0; }
+  button:hover .metronome__icon line {
+    stroke: #23c6d0; }
+  button:hover .metronome__icon rect {
+    fill: #23c6d0; }
+  button:hover .player__icon_loop path {
+    fill: #23c6d0; }
+  button:hover .player__icon_big-loop path {
+    stroke: #23c6d0;
+    fill: #23c6d0; }
+
+.button_active {
+  border: 1px solid #c4c4c4;
+  border-radius: 5px; }
+
+.buttons {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+.buttons__main {
+  display: flex;
+  align-items: center; }
+
+.buttons__other {
+  display: flex; }
+
+.button__center {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .button__center:focus .player__icon path {
+    stroke: #23c6d0;
+    fill: #23c6d0; }
+  .button__center:focus .player__icon line {
+    stroke: #23c6d0; }
+  .button__center:focus .mute__icon path {
+    stroke: #23c6d0; }
+  .button__center:focus .mute__icon line {
+    stroke: #23c6d0; }
+
+.play {
+  width: 62px;
+  height: 62px;
+  position: relative;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 50%;
+  background: #666666; }
+  .play :focus .play-icon path {
+    stroke: #23c6d0;
+    fill: #23c6d0; }
+
+.play-icon {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 17px;
+  left: 17px; }
+
+.song__buttons {
+  display: flex; }
+
+.player__button {
+  width: 50px;
+  height: 50px;
+  margin-left: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .player__button:focus .metronome__icon path {
+    stroke: #23c6d0; }
+  .player__button:focus .metronome__icon line {
+    stroke: #23c6d0; }
+  .player__button:focus .metronome__icon rect {
+    fill: #23c6d0; }
+  .player__button:focus .player__icon path {
+    stroke: #23c6d0;
+    fill: #23c6d0; }
+  .player__button:focus .player__icon line {
+    stroke: #23c6d0; }
+
+.player__icon {
+  height: 20px; }
+
+.mute__icon {
+  height: 26px; }
+
+.metronome__icon {
+  height: 20px; }
+
+.player__icon_loop {
+  height: 20px; }
+
+.player__icon_big-loop {
+  height: 35px; }
+
+.song__star {
+  margin-right: 15px; }
+
+.fullscreen__button {
+  display: none; }
+
+.fullscreen-active {
+  display: block; }
+
+/*# sourceMappingURL=piano.css.map */
