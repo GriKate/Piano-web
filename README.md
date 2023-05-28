@@ -1,7 +1,7 @@
 # Piano-web
 Web application for learning to play the piano.
 
-Tabs move during file execution on /player page.
+Tabs move during .midi file execution on /player page.
 
 ## Implemented with
 Vue 2 \
