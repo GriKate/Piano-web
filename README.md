@@ -1,6 +1,17 @@
 # Piano-web
-## Web application for learning to play the piano
+Web application for learning to play the piano
 
+## Implemented with
+Vue 2 \
+VueX \
+Vue Router \
+Vue Axios \
+Vue Clickaway \
+Tone.js \
+Konva.js \
+JavaScript \
+HTML \
+CSS (SCSS)
 
 ## Build Setup
 
