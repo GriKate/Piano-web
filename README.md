@@ -1,5 +1,7 @@
 # Piano-web
-Web application for learning to play the piano
+Web application for learning to play the piano.
+
+Tabs move during file execution on /player page.
 
 ## Implemented with
 Vue 2 \
