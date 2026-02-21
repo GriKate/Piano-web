@@ -23,7 +23,7 @@ export const OctaveNames = Object.freeze({
 export const BlackButtonRegex = /.#$/;
 export const NoteNameRegex = /[ABCDEFG]/;
 
-export const showNotesTimeInterval = 5;
+export const showNotesTimeInterval = 3;
 export const beforeShowInterval = 2;
 export const afterShowInterval = 5;
 

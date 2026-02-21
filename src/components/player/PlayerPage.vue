@@ -28,15 +28,14 @@ export default {
     //this.$refs.notes.setChecked('3', 'B');
   },
   methods: {
-    handleTrigger(note) {
-      if (note.type === 'attack') {
-        this.$refs.piano.$refs.notes.setChecked(note.octave, note.pitch);
-      }
-      if (note.type === 'release') {
-        this.$refs.piano.$refs.notes.setUnchecked(note.octave, note.pitch);
-        // console.log(note.duration);
-      }
-    },
+    // handleTrigger(note) {
+    //   if (note.type === 'attack') {
+    //     this.$refs.piano.$refs.notes.setChecked(note.octave, note.pitch);
+    //   }
+    //   if (note.type === 'release') {
+    //     this.$refs.piano.$refs.notes.setUnchecked(note.octave, note.pitch);
+    //   }
+    // },
     openModal() {
       this.showModal = true;
     },

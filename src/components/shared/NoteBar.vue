@@ -1,17 +1,5 @@
 <template>
   <v-group ref="bar">
-    // переместить линии на слой ниже табов, тк здесь линия отображается для
-    каждой ноты в переборе, и нижние табы перекрываются линиями верхних табов в
-    переборе. Линии отдельным компонентом ставим в index перед табами
-    <!--    <v-line-->
-    <!--      v-for="note in bar"-->
-    <!--      :key="note.name"-->
-    <!--      :config="{-->
-    <!--        points: [0, tailHeight, width, tailHeight],-->
-    <!--        stroke: 'black',-->
-    <!--        strokeWidth: 1,-->
-    <!--      }"-->
-    <!--    />-->
     <v-rect
       v-if="tailHeight > barWidth"
       ref="tail"
@@ -75,8 +63,17 @@ export default {
     note: { type: Object, required: true },
     width: { type: Number, required: true },
   },
+  data: () => ({
+    animation: null,
+  }),
   computed: {
-    ...mapGetters(['currentTime', 'pianoHeight', 'pianoDimensions']),
+    ...mapGetters([
+      'currentTime',
+      'currentLoopTime',
+      'isLoopActive',
+      'pianoHeight',
+      'pianoDimensions',
+    ]),
     oneTickHeight() {
       return this.getOneTickHeight();
     },
@@ -98,7 +95,11 @@ export default {
     const anim = new Konva.Animation((frame) => {
       node.y(this.noteBarY());
     }, node.getLayer());
-    anim.start();
+    this.animation = anim;
+    this.animation.start();
+  },
+  beforeDestroy() {
+    this.animation.stop();
   },
   methods: {
     getTailHeight() {
@@ -160,6 +161,7 @@ export default {
       return this.pianoDimensions.trackHeight / showNotesTimeInterval;
     },
     noteBarY() {
+      // console.log('currentTime ' + this.currentTime);
       return (
         (this.currentTime - this.bar.time) * this.oneTickHeight -
         this.tailHeight
