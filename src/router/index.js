@@ -14,7 +14,7 @@ import clear from '../components/clear';
 
 Vue.use(Router);
 
-export default new Router({
+const router = new Router({
   mode: 'history',
   routes: [
     {
@@ -74,3 +74,13 @@ export default new Router({
     },
   ],
 });
+
+router.beforeEach((to, from, next) => {
+  if (to.path === '/') {
+    next('/player');
+  } else {
+    next();
+  }
+});
+
+export default router;

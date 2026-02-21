@@ -19,6 +19,8 @@ export default () =>
       melodies: [],
       displayNotes: [],
       currentTime: null,
+      currentLoopTime: null,
+      isLoopActive: false,
       pianoDimensions: {},
       pauseClickCount: 0,
       defaultMelodyName: "Ludwig van Beethoven - Sonata № 14, 'Moonlight'",
@@ -72,6 +74,12 @@ export default () =>
       },
       currentTime(state) {
         return state.currentTime;
+      },
+      currentLoopTime(state) {
+        return state.currentLoopTime;
+      },
+      isLoopActive(state) {
+        return state.isLoopActive;
       },
       pianoDimensions(state) {
         return state.pianoDimensions;
@@ -129,6 +137,12 @@ export default () =>
       mutateCurrentTime(state, currentTime) {
         state.currentTime = currentTime;
       },
+      mutateCurrentLoopTime(state, currentLoopTime) {
+        state.currentLoopTime = currentLoopTime;
+      },
+      mutateIsLoopActive(state, isLoopActive) {
+        state.isLoopActive = isLoopActive;
+      },
       mutatePianoDimensions(state, pianoDimensions) {
         state.pianoDimensions = pianoDimensions;
       },
@@ -148,11 +162,22 @@ export default () =>
           'mutatePianoDimensions',
           getPianoDimensions(container.clientWidth, container.clientHeight)
         );
+        // console.log(container.clientWidth, container.clientHeight);
       },
       setNotes({ commit }, notes) {
         commit('mutateNotes', notes);
       },
+      setLoopActive({ commit }, isLoopActive) {
+        commit('mutateIsLoopActive', isLoopActive);
+        // console.log('isLoopActive ' + this.isLoopActive);
+      },
+      setCurrentLoopTime({ commit }, currentTime) {
+        const currentLoopTime = currentTime + 5;
+        commit('mutateCurrentLoopTime', currentLoopTime);
+        console.log('1 currentLoopTime ' + this.currentLoopTime);
+      },
       calculateDisplayNotes({ commit, state }, currentTime) {
+        // console.log('notes time ' + currentTime);
         const displayNotes = state.notes.filter(
           (note) =>
             note.time - (currentTime - showNotesTimeInterval) <
@@ -160,9 +185,12 @@ export default () =>
             note.time - (currentTime - showNotesTimeInterval) >
               afterShowInterval * -1
         );
-
         commit('mutateCurrentTime', currentTime);
         commit('mutateDisplayNotes', displayNotes);
+      },
+      clearDisplayNotes({ commit }) {
+        // console.log('clearDisplayNotes');
+        commit('mutateDisplayNotes', []);
       },
       setCount({ commit }, count) {
         commit('setCount', count);

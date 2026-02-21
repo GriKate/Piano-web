@@ -37,30 +37,8 @@
           strokeWidth: 1,
         }"
       />
-      <!--      <v-rect-->
-      <!--        v-for="(note, index) in octave.notes.white"-->
-      <!--        :key="`${index}-white-track`"-->
-      <!--        :config="{-->
-      <!--          x: note.x,-->
-      <!--          width: note.width,-->
-      <!--          height: dimensions.trackHeight,-->
-      <!--          fill: '#373737',-->
-      <!--          stroke: 'black',-->
-      <!--          strokeWidth: 1,-->
-      <!--        }"-->
-      <!--      />-->
-      <!--      <v-rect-->
-      <!--        v-for="(note, index) in octave.notes.black"-->
-      <!--        :key="`${index}-black-track`"-->
-      <!--        :config="{-->
-      <!--          x: note.x,-->
-      <!--          width: note.width,-->
-      <!--          height: dimensions.trackHeight,-->
-      <!--          fill: '#212121',-->
-      <!--        }"-->
-      <!--      />-->
     </v-group>
-    <!--    <lines :width="width" :height="dimensions.trackHeight" />-->
+    <!--<lines :width="width" :height="dimensions.trackHeight" />-->
   </v-group>
 </template>
 

@@ -307,7 +307,7 @@
 
 <script>
 import { Midi } from '@tonejs/midi';
-import * as Tone from 'tone';
+// import * as Tone from 'tone';
 import { mapActions } from 'vuex';
 import { showNotesTimeInterval } from '@/constants'; //5
 import { log } from 'tone/build/esm/core/util/Debug';

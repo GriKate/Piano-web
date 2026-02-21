@@ -60,7 +60,6 @@ export default {
       }
       if (note.type === 'release') {
         this.$refs.notes.setUnchecked(note.octave, note.pitch);
-        // console.log(note.duration);
       }
     },
     getMelody() {

@@ -102,7 +102,7 @@ class Octave {
 }
 
 export const getPianoDimensions = (containerWidth, containerHeight) => {
-  if (!containerHeight || !containerHeight) return { trackHeight: 0 }; //{}
+  if (!containerWidth || !containerHeight) return { trackHeight: 0 }; //{}
 
   // black field with moving parts
   const trackHeight = containerHeight - whiteNoteHeight;
@@ -111,6 +111,7 @@ export const getPianoDimensions = (containerWidth, containerHeight) => {
     containerWidth,
     containerHeight - whiteNoteHeight - bottomLineHeight
   );
+  // console.log(containerHeight - whiteNoteHeight - bottomLineHeight);
 
   return {
     trackHeight,
